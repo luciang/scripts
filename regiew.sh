@@ -73,4 +73,7 @@ activate_nat
 mangle_ttl
 configure_dhserver
 /etc/init.d/dhcp3-server restart
-
+if [ ! "x$?" == "x0" ]; then
+    echo "Could not restart dhcp3-server. If you don't have it installed run
+           'sudo apt-get install dhcp3-server'"
+fi
