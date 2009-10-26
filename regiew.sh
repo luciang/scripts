@@ -55,15 +55,15 @@ configure_dhserver()
  
  cp $DHCPSERVER_CONF $DHCPSERVER_CONF.back
  
- echo 'subnet '$SUBNET'.0 netmask 255.255.255.0 {
-              range '$SUBNET'.100 '$SUBNET'.200;
-              option domain-name-servers 141.85.0.82, 141.85.0.81;
-              option domain-name "p16.eregie.pub.ro";
-              option routers '$SUBNET'.1;
-              option broadcast-address '$SUBNET'.255;
+ echo "subnet "$SUBNET".0 netmask 255.255.255.0 {
+              range "$SUBNET".100 "$SUBNET".200;
+              option domain-name-servers "`cat /etc/resolv.conf | grep nameserver | cut -d' ' -f 2 | head -c -1 | tr '\n' ','`";
+              option domain-name \""`cat /etc/resolv.conf | grep domain | cut -d' ' -f 2 | head -c -1 | tr '\n' ','`"\";
+              option routers "$SUBNET".1;
+              option broadcast-address "$SUBNET".255;
               default-lease-time 600;
               max-lease-time 7200;
-       }' > $DHCPSERVER_CONF
+       }" > $DHCPSERVER_CONF
 }
 
 disable_wpa_roaming
