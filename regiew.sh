@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WIFI=wlan0
-SSID=zizimumu
+SSID=zizizaz
 PASS=55555
 SUBNET=192.168.5
 #IFACE=eth0
@@ -17,7 +17,7 @@ disable_wpa_roaming()
 
 configure_ad_hoc_wireless_card()
 {
- echo "Configuring wireless link..."
+ echo "Configuring wireless link... [essid=$SSID]"
  /sbin/iwconfig $WIFI mode ad-hoc essid $SSID channel 1
  /sbin/iwconfig $WIFI key s:$PASS
 }
