@@ -1,0 +1,2 @@
+# access, create, decompress archives in a consistent manner
+sudo apt-get install atool
