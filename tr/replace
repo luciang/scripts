@@ -4,7 +4,15 @@ director:dosar
 folder:dosar
 bait:octet
 baiți:octeți
+redor:player
+redoare:playere
+inconsistent:inconsecvent
+inconsistență:inconsecvență
+
 
 [warn]
 imposibil #imposibil de făcut un lucru
 am # am făcut aia, am dres aialaltă (trebuie reformulat)
+download
+upload
+link
