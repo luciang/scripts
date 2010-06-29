@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WIFI=wlan0
-SSID=zizizaz
+SSID=killer
 PASS=55555
 SUBNET=192.168.5
 #IFACE=eth0
@@ -66,6 +66,16 @@ configure_dhserver()
        }" > $DHCPSERVER_CONF
 }
 
+disable_nm_wireless()
+{
+ # disable the wireless connection
+ # cnetworkmanager can be found at http://repo.or.cz/w/cnetworkmanager.git
+ echo "Disabling NetworkManager managed wireless connection"
+ cnetworkmanager --wifi no
+}
+
+
+disable_nm_wireless
 disable_wpa_roaming
 configure_ad_hoc_wireless_card
 configure_interface_address
