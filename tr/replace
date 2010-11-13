@@ -8,7 +8,14 @@ redor:player
 redoare:playere
 inconsistent:inconsecvent
 inconsistență:inconsecvență
-
+maximum:maxim
+torrent:torent
+torrente:torenți
+torente:torenți
+bifă:căsuță de bifare
+bife:căsuțe de bifare
+bifei:căsuței de bifare
+bifelor:căsuțelor de bifare
 
 [warn]
 imposibil #imposibil de făcut un lucru
@@ -16,3 +23,13 @@ am # am făcut aia, am dres aialaltă (trebuie reformulat)
 download
 upload
 link
+situl
+siteul
+sit
+sait
+saitul
+siturile
+saiturile
+
+
+nu se poate trimite URI-uri ...

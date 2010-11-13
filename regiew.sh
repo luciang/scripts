@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WIFI=wlan0
-SSID=killer
+SSID=asdfjkl
 PASS=55555
 SUBNET=192.168.5
 #IFACE=eth0
